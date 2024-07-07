@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamee</title>
+</head>
+<style>
+    div#titulo {
+        text-align: center;
+        font: normal 11pt arial;
+    }
+    div#cosmetics {
+        text-align: center;
+    }
+    input#tente {
+        margin-left: -10px;
+    }
+    input#boton {
+        margin-left: 10px;
+    }
+    input {
+        margin: 10px;
+    }
+    script {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #reset{
+        text-align: center;
+        margin-right: 20px;
+    }
+
+</style>
+<body>
+    
+    <div id="titulo"><h1>Tente adivinhar o Número!</h1>
+    <p>O computador escolheu um número entre 0 e 5. Tente adivinhar!</p></div>
+    
+    <button id="reset" onclick="resetar()">Reset:</button>
+   
+    <div id="cosmetics"> <input type="number" id="tente" min="0" max="5">
+    <input type="button" onclick="adivinhar()" value="Apostar" id="boton">
+    <div id="res"></div> </div>
+
+    <script>
+        // O computador escolhe um número aleatório entre 0 e 5
+        var num = Math.floor(Math.random() * 6);
+        
+        function resetar() {
+        numeroEscolhido = Math.floor(Math.random() * 6);
+        document.getElementById('res').innerHTML = "";
+        document.getElementById('reset').style.display = 'none';
+    } 
+        
+        function adivinhar() {
+            var palpite = document.getElementById('tente').value;
+            var res = document.getElementById('res')
+
+            if (palpite == num) {
+                res.innerHTML = 'Parabéns, você acertou!'
+            } else {
+                res.innerHTML = 'Que pena, Você errou. Tente Novamente!'
+            }
+        }
+    </script>
+
+</body>
+</html>

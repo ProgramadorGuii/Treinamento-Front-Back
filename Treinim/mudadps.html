@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    div#goo {
+        background-color: gray;
+        margin-left: 200px;
+        width: 500px;
+        height: 40px;
+        color: white;
+        font: normal 14pt arial;
+    }
+    button#botao {
+        margin-left: 200px;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    
+    <h1>O que você deseja Pesquisar?</h1>
+    <div id="goo">
+        <form id="searchForm" action="https://www.google.com/search" method="get" target="_blank" >
+        <input type="text" name="q" id="searchInput" placeholder="Digite sua Pesquisa: " required>
+        <button id="botao" type="submit">Pesquisar...</button>
+        </form>
+    </div>
+
+
+</body>
+</html>

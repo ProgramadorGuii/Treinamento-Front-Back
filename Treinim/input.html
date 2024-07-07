@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+</head>
+<style>
+    input#botaun {
+        margin-top: 20px;
+        
+    }
+
+    div#res {
+        text-align: center;
+        margin-top: -150px;
+        font: normal 30pt arial;
+    }
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<body>
+    
+<p><strong>Prova:</strong></p> <input type="number" name="prova" id="prova">
+<p><strong>Teste:</strong></p> <input type="number" name="teste" id="teste"> 
+<p><strong>Qualitativa:</strong></p> <input type="number" name="qualitativa" id="qual"> <br>
+
+<input type="button" value="CALCULAR:" onclick="somar()" id="botaun">
+
+<div id="res">Média:</div>
+
+<script>
+function somar() {
+    var p = document.getElementById('prova')
+    var t = document.getElementById('teste')
+    var q = document.getElementById('qual')
+    var res = document.getElementById('res')
+    var n1 = Number(p.value)
+    var n2 = Number(t.value)
+    var n3 = Number(q.value)
+    var ss = (n1 + n2 + n3) / 2
+    res.innerHTML = `Sua média foi: ${ss}`
+}
+</script>
+
+</body>
+</html>
