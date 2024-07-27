@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora (VAI SER DIFICIL D+)</title>
+</head>
+<style>
+    body {
+        background-color: cornflowerblue;
+    }
+    div#base {
+        background-color: darkgrey;
+        text-align: center;
+        width: 500px;
+        height: 500px;
+        border: 3px solid black;
+        border-radius: 5%;
+        margin-left: 700px;
+    }
+    .center {
+        text-align: center;
+    }
+
+    input#primeiro_numero {
+        width: 40px;
+    }
+    input#operador {
+        width: 10px;
+    }
+    input#segundo_numero {
+        width: 40px;
+    }
+    p {
+        font: normal 15pt arial;
+    }
+    h4 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    strong {
+        color: rgb(16, 93, 236);
+    }
+    #help {
+        margin-left: -00px;
+        margin-top: 70px;
+    }
+</style>
+<body>
+    <div class="center" id="base"> <br>
+        <input id="primeiro_numero" type="number">
+        <input id="operador" type="text">
+        <input id="segundo_numero" type="number">
+        <input type="button" onclick="calcular()" value="Somar">
+        <div id="p">
+                
+        </div>
+        <div id="o">
+                
+        </div>
+        <div id="s">
+                
+        </div>
+
+        <div id="res">
+
+        </div>
+
+        <hr>
+
+        <p id="help">Símbolos: </p>
+        <h4 id="m">Multiplicação: *</h4>
+        <h4 id="m">Divisão: /</h4>
+        <h4 id="m">Adição: +</h4>
+        <h4 id="m">Subtração: -</h4>
+    </div>
+
+
+    <script>
+        function calcular() {
+            var primeiro = document.getElementById('primeiro_numero')
+            var operador = document.getElementById('operador')
+            var segundo = document.getElementById('segundo_numero')
+            var res = document.getElementById('res')
+
+            p = Number(primeiro.value)
+            o = (operador.value)
+            s = Number(segundo.value)
+            r = (res.value)
+            
+            if (o == '+') {
+                res.innerHTML = `<p>${p} ${o} ${s} = <strong>${p+s}</strong></p>`
+            }
+
+            if (o == '/') {
+                res.innerHTML = `<p>${p} ${o} ${s} = <strong>${p/s}</strong></p>`
+            }
+
+            if (o == '-') {
+                res.innerHTML = `<p>${p} ${o} ${s} = <strong>${p-s}</strong></p>`
+            }
+
+            if (o == '*') {
+                res.innerHTML = `<p>${p} ${o} ${s} = <strong>${p*s}</strong></p>`
+            }
+
+        }
+    </script>
+
+
+</body>
+</html>
